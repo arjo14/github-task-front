@@ -1,25 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import CommitStatistic from "./components/CommitStatistic";
+import RepositorySearch from "./components/repository/RepositorySearch";
+import Layout from "./components/main/Layout";
+import Bookmarks from "./components/Bookmarks";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Layout>
+        <Switch>
+          <Route path="/commits/:owner/:repo" component={CommitStatistic}/>
+          <Route path="/bookmarks" component={Bookmarks}/>
+          <Route path="/" component={RepositorySearch}/>
+        </Switch>
+      </Layout>
+    </BrowserRouter>
   );
 }
 
