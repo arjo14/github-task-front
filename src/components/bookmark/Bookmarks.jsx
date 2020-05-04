@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {getBookmarkedRepos} from "../network/utility";
+import {getBookmarkedRepos} from "../../network/utility";
 import {Link} from "react-router-dom";
 
 const tabStyle = {
@@ -31,6 +31,13 @@ class Bookmarks extends Component {
 
   render() {
     const {bookmarkedRepos} = this.state;
+    if (!bookmarkedRepos || bookmarkedRepos.length === 0) {
+      return (<div style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}><h2>You don't have bookmarked repositories.</h2></div>)
+    }
     return (
       <div style={{
         display: 'flex',

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {searchCommits} from "../network/service/api";
-import CanvasJSReact from '../canvasjs.react';
-import {bookmarkRepo, isBookmarked, removeBookmarkedRepo} from "../network/utility";
+import {searchCommits} from "../../network/service/api";
+import CanvasJSReact from '../../canvasjs.react';
+import {bookmarkRepo, isBookmarked, removeBookmarkedRepo} from "../../network/utility";
 import CommitTree from "./CommitTree";
 //var CanvasJSReact = require('./canvasjs.react');
 let CanvasJS = CanvasJSReact.CanvasJS;

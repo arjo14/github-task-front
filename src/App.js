@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
-import CommitStatistic from "./components/CommitStatistic";
+import CommitStatistic from "./components/commit/CommitStatistic";
 import RepositorySearch from "./components/repository/RepositorySearch";
 import Layout from "./components/main/Layout";
-import Bookmarks from "./components/Bookmarks";
+import Bookmarks from "./components/bookmark/Bookmarks";
 
 function App() {
   return (
