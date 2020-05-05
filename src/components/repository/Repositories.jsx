@@ -12,7 +12,7 @@ const Repositories = (items, activePage, handlePageChange) => {
     <div>
       {
         repos.map(item => (
-          <RepositoryRow repo={item}/>
+          <RepositoryRow repo={item} key={item.id}/>
         ))
       }
 

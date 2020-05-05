@@ -2,17 +2,6 @@ import React, {Component} from 'react';
 import {getBookmarkedRepos} from "../../network/utility";
 import {Link} from "react-router-dom";
 
-const tabStyle = {
-  padding: '1%',
-  width: '25%',
-  // backgroundColor: 'white',
-  border: '1px solid black',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  cursor: 'pointer'
-};
-
 class Bookmarks extends Component {
   constructor(props) {
     super(props);

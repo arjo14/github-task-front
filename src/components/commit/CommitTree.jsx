@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Time from "react-time-format";
 
 const CommitTree = (items) => {
-  console.log(items)
   return (
     <div style={{
       display: 'flex',

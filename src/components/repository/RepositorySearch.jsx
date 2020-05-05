@@ -56,7 +56,7 @@ class RepositorySearch extends Component {
       repo: '',
       page: 1,
       pageCount: 10,
-      perPage: 5,
+      perPage: 7,
       searchResult: [],
       hasError: false,
 
@@ -82,7 +82,7 @@ class RepositorySearch extends Component {
         this.setState({
           searchResult: data.items,
           page: 1,
-          pageCount: data.total_count % perPage === 0 ? data.total_count / perPage : data.total_count / perPage + 1
+          pageCount: Math.ceil(data.total_count / perPage )
         });
       })
       .catch(err => alert(err))
@@ -95,7 +95,7 @@ class RepositorySearch extends Component {
         this.setState({
           searchResult: data.items,
           page: activePage,
-          pageCount: data.total_count % perPage === 0 ? data.total_count / perPage : data.total_count / perPage + 1
+          pageCount: Math.ceil(data.total_count / perPage )
         });
       })
       .catch(err => alert(err))

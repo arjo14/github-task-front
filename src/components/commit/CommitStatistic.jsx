@@ -3,8 +3,6 @@ import {searchCommits} from "../../network/service/api";
 import CanvasJSReact from '../../canvasjs.react';
 import {bookmarkRepo, isBookmarked, removeBookmarkedRepo} from "../../network/utility";
 import CommitTree from "./CommitTree";
-//var CanvasJSReact = require('./canvasjs.react');
-let CanvasJS = CanvasJSReact.CanvasJS;
 let CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 
@@ -71,9 +69,6 @@ class CommitStatistic extends Component {
         dataPoints: dataPoints
       }]
     };
-    const pointerEmoji️ = this.state.showCommitterChart ? (<span role="img" aria-label="left">⬅</span>) : (
-      <span role="img" aria-label="right">➡</span>);
-
     return (
       <div>
         <div style={{
