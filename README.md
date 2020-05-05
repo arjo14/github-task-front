@@ -1,4 +1,4 @@
-##React Project: **Github Task**
+## React Project: Github Task
 
 ## Available Scripts
 
