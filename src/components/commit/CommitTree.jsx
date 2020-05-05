@@ -26,7 +26,7 @@ const CommitTree = (items) => {
                     style={{fontSize: '14px'}}>{commit.commit.message.length > 63 ? commit.commit.message.substring(0, 60) + "..." : commit.commit.message.substring(0, 60)}</p>
                   <p style={{fontSize: '12px'}}> {commit.committer &&
                   <img src={commit.committer.avatar_url} alt="user image"
-                       height="20px"/>} {commit.commit.committer.name} Committed on <Time
+                       height="20px"/>} {commit.commit.committer.name} committed on <Time
                     value={commit.commit.committer.date} format="hh:mm YYYY-MM-DD"/></p>
                 </div>
                 <div style={{
